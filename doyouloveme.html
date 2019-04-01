@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Do you love me?</h2>
+    <button type="button" onclick="yes()" id="yes">YES</button>  <button type="button" onmouseover="no()" id="khong">NO</button>
+    <script>
+        function yes() {
+            alert("<3")
+        }
+        let khong = document.getElementById('khong');
+
+        function init() {
+            khong.style.position = 'relative';
+            khong.style.left = '0px';
+            khong.style.top = '0px'
+        }
+        function no() {
+            let b = Math.random()*768;
+            let c = Math.random()*393;
+            khong.style.left = b + 'px';
+            khong.style.top =  c + 'px';
+
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>
